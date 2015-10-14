@@ -1,0 +1,83 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+
+body {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Sigmar One", cursive;
+}
+
+.game {
+  width: 750px;
+  height: 750px;
+}
+
+.engine {
+  width: 100%;
+  height: 100%;
+  canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc !important;
+  }
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .panel__intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: solid #000 1px;
+    background-color: #c60;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 0 0;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+  }
+  .panel__game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 3rem;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 1) ;
+    -text-stroke: 1px #000;
+    -webkit-text-stroke: 2px #000;
+  }
+  .panel__outro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: solid #000 1px;
+    background-color: #c60;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 0 0;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 1) ;
+  }
+}
