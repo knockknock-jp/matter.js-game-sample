@@ -60,6 +60,16 @@ $ ->
       @_engine.world.bounds.max = {x: STAGE_WIDTH, y: STAGE_HEIGHT}
       # 物理シュミレーションを実行
       Matter.Engine.run @_engine
+      # 天井生成
+      ceiling = Matter.Bodies.rectangle(STAGE_WIDTH / 2, -10, STAGE_WIDTH, 10, {
+        isStatic: true # 固定するか否か
+      })
+      # 床生成
+      floor = Matter.Bodies.rectangle(STAGE_WIDTH / 2, STAGE_HEIGHT + 10, STAGE_WIDTH, 10, {
+        isStatic: true # 固定するか否か
+      })
+      # 天井・床追加
+      Matter.World.add @_engine.world, [ceiling, floor]
 
     # イントロシーン開始
     setIntroScene: ->

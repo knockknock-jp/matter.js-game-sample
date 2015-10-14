@@ -42,6 +42,7 @@
       function Physics(element) {
         this._onHit = __bind(this._onHit, this);
         this._onControll = __bind(this._onControll, this);
+        var ceiling, floor;
         this._engine = null;
         this._player = null;
         this._obstacleArr = [];
@@ -63,6 +64,13 @@
           y: STAGE_HEIGHT
         };
         Matter.Engine.run(this._engine);
+        ceiling = Matter.Bodies.rectangle(STAGE_WIDTH / 2, -10, STAGE_WIDTH, 10, {
+          isStatic: true
+        });
+        floor = Matter.Bodies.rectangle(STAGE_WIDTH / 2, STAGE_HEIGHT + 10, STAGE_WIDTH, 10, {
+          isStatic: true
+        });
+        Matter.World.add(this._engine.world, [ceiling, floor]);
       }
 
       Physics.prototype.setIntroScene = function() {
