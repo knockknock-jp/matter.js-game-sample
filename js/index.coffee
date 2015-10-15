@@ -56,8 +56,6 @@ $ ->
           }
         }
       }
-      # 演算領域を設定
-      @_engine.world.bounds.max = {x: STAGE_WIDTH, y: STAGE_HEIGHT}
       # 物理シュミレーションを実行
       Matter.Engine.run @_engine
       # 天井生成
@@ -183,7 +181,7 @@ $ ->
       @_body.render.sprite.texture = "./images/gesso2.png"
       if @_intervalId
         clearTimeout @_intervalId
-      @_intervalId = setTimeout ()=>
+      @_intervalId = setTimeout =>
         @_body.render.sprite.texture = "./images/gesso.png"
       , 100
       # 効果音再生イベント

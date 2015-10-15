@@ -59,10 +59,6 @@
             }
           }
         });
-        this._engine.world.bounds.max = {
-          x: STAGE_WIDTH,
-          y: STAGE_HEIGHT
-        };
         Matter.Engine.run(this._engine);
         ceiling = Matter.Bodies.rectangle(STAGE_WIDTH / 2, -10, STAGE_WIDTH, 10, {
           isStatic: true
